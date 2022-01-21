@@ -4,11 +4,14 @@ const path = require('path');
 const { animals } = require('./data/animals.json');
 
 const PORT = process.env.PORT || 3001;
+
 const app = express();
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+
+app.use(express.static('public'));
 
 function filterByQuery(query, animalsArray) {
   let personalityTraitsArray = [];
@@ -53,6 +56,8 @@ function createNewAnimal(body, animalsArray) {
 }
 
 function validateAnimal(animal) {
+    // '!' called bang means animal.name is false or doesn't exist
+    // '||' double bar is an or 
     if (!animal.name || typeof animal.name !== 'string') {
         return false;
     }
@@ -96,6 +101,22 @@ app.post('/api/animals', (req, res) => {
         const animal = createNewAnimal(req.body, animals);
         res.json(animal);
     }
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(PORT, () => {

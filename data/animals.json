@@ -162,6 +162,60 @@
         "hungry"
       ],
       "id": "16"
+    },
+    {
+      "name": "Kyro",
+      "species": "Wolf",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "17"
+    },
+    {
+      "name": "Kyro",
+      "species": "Wolf",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "18"
+    },
+    {
+      "name": "Kyro",
+      "species": "Wolf",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "19"
+    },
+    {
+      "name": "Kyro",
+      "species": "Wolf",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "20"
+    },
+    {
+      "name": "Kyro",
+      "species": "Wolf",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "21"
+    },
+    {
+      "name": "Kyro",
+      "species": "Wolf",
+      "diet": "piscivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "22"
     }
   ]
 }
